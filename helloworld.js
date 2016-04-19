@@ -375,7 +375,7 @@ console.log("***************************");
 console.log(util.inspect(Base,true));
 //*/
 
-/* OS 模块测试
+//* OS 模块测试
 var osModel = require('os');
 console.log("hostname:"+osModel.hostname());
 console.log("type: "+osModel.type())
@@ -390,19 +390,7 @@ console.log("freemem: "+osModel.freemem()+" M: "+osModel.freemem()/8/1024 +" G: 
 var interfaces = osModel.networkInterfaces();
 console.log("networkInterfaces: "+ interfaces);
 console.log("newworkInterfaces[0]" + interfaces[1]);
-//*/
-//* DNS 模块
-var dnsModel = require('dns');
-dnsModel.lookup("www.github.com",function(error,address,family){
-console.log("ip 地址: "+address);
-dnsModel.reverse(address,function(error,hostname){
-	if(error)
-	{
-		console.log(error.stack);
-	}
-	console.log("反向解析："+address+" : "+JSON.stringify(hostname));
-});
-});
-console.log("DNS done");
+
+
 
 //*/
