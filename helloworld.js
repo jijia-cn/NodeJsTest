@@ -340,7 +340,7 @@ for(var i=1;i<10;i++)
 	process.stdout.write("\n");
 }
 //*/
-
+/*/
 var util = require('util');
 function Base()
 {
@@ -373,3 +373,24 @@ objSub.showName();
 console.log(objSub);
 console.log("***************************");
 console.log(util.inspect(Base,true));
+//*/
+
+//* OS 模块测试
+var osModel = require('os');
+console.log("hostname:"+osModel.hostname());
+console.log("type: "+osModel.type())
+console.log("tempdir: "+osModel.tmpdir());
+console.log("arch: "+osModel.arch());
+console.log("release: "+osModel.release());
+console.log("uptime: "+osModel.uptime());
+console.log("loadavg: "+osModel.loadavg());
+var totalMem = osModel.totalmem();
+console.log("totalmem: "+totalMem+" M: "+totalMem/8/1024 +" G: "+totalMem/8/1024/1024);
+console.log("freemem: "+osModel.freemem()+" M: "+osModel.freemem()/8/1024 +" G: "+osModel.freemem()/8/1024/1024);
+var interfaces = osModel.networkInterfaces();
+console.log("networkInterfaces: "+ interfaces);
+console.log("newworkInterfaces[0]" + interfaces[1]);
+
+
+
+//*/
